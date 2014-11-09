@@ -25,5 +25,8 @@
     "chai": "~1.9.2",
     "istanbul": "~0.3.2",
     "mocha": "~2.0.1"
+  },
+  "dependencies": {
+    "defaults": "~1.0.0"
   }
 }
