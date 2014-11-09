@@ -2,21 +2,20 @@
 
 var defaults = require('defaults');
 
-function round (value, direction, multiple) {
+function roundDirection (value, direction, multiple) {
   var method = direction === 'down' ? 'floor' : 'ceil';
   return Math[method](value / multiple) * multiple
 }
 
-module.exports = function (value, options) {
-  options = defaults(options, {
-    multiple: 1
-  });
+var round = module.exports = function (value, multiple, options) {
+  multiple = multiple || 1;
+  options = options || {};
   if (options.direction) {
-    return round(value, options.direction, options.multiple)
+    return roundDirection(value, options.direction, multiple)
   }
   else {
-    var down = round(value, 'down', options.multiple);
-    var up = round(value, 'up', options.multiple);
+    var down = roundDirection(value, 'down', multiple);
+    var up = roundDirection(value, 'up', multiple);
     if ((value - down) > (up - value)) {
       return up;
     }
