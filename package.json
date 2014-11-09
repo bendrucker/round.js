@@ -1,0 +1,29 @@
+{
+  "name": "round",
+  "version": "1.0.0",
+  "description": "Round numbers to the nearest increment with an optional direction",
+  "main": "./src/index.js",
+  "scripts": {
+    "test": "istanbul cover _mocha -- ./test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/bendrucker/round.js.git"
+  },
+  "keywords": [
+    "numbers",
+    "round",
+    "increment"
+  ],
+  "author": "Ben Drucker <bvdrucker@gmail.com> (http://www.bendrucker.me/)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/bendrucker/round.js/issues"
+  },
+  "homepage": "https://github.com/bendrucker/round.js",
+  "devDependencies": {
+    "chai": "~1.9.2",
+    "istanbul": "~0.3.2",
+    "mocha": "~2.0.1"
+  }
+}
