@@ -20,8 +20,8 @@ describe('round', function () {
     expect(round(28, 5)).to.equal(30);
   });
 
-  it('rounds down when value is equidistant from rounded values', function () {
-    expect(round(27.5, 5)).to.equal(25);
+  it('rounds down up value is equidistant from rounded values', function () {
+    expect(round(27.5, 5)).to.equal(30);
   });
 
   it('can handle decimals', function () {

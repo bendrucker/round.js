@@ -16,11 +16,11 @@ var round = module.exports = function (value, multiple, options) {
   else {
     var down = roundDirection(value, 'down', multiple);
     var up = roundDirection(value, 'up', multiple);
-    if ((value - down) > (up - value)) {
-      return up;
+    if ((value - down) < (up - value)) {
+      return down;
     }
     else {
-      return down;
+      return up;
     }
   }
 };
