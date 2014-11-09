@@ -37,4 +37,11 @@ describe('round', function () {
     .to.equal(25);
   });
 
+  it('can handle decimals', function () {
+    expect(round(0.45, {
+      multiple: 0.5
+    }))
+    .to.equal(0.5);
+  });
+
 });
