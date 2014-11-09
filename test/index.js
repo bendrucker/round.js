@@ -8,17 +8,11 @@ describe('round', function () {
   });
 
   it('can round up', function () {
-    expect(round(26, 5, {
-      direction: 'up'
-    }))
-    .to.equal(30);
+    expect(round.up(26, 5)).to.equal(30);
   });
 
   it('can round down', function () {
-    expect(round(26.5, 5, {
-      direction: 'down'
-    }))
-    .to.equal(25);
+    expect(round.down(26.5, 5)).to.equal(25);
   });
 
   it('can round to the nearest multiple in either direction', function () {

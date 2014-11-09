@@ -24,3 +24,15 @@ var round = module.exports = function (value, multiple, options) {
     }
   }
 };
+
+round.up = function (value, multiple, options) {
+  return round(value, multiple, {
+    direction: 'up'
+  });
+};
+
+round.down = function (value, multiple, options) {
+  return round(value, multiple, {
+    direction: 'down'
+  });
+};
