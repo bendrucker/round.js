@@ -1,7 +1,5 @@
 'use strict';
 
-var defaults = require('defaults');
-
 function roundDirection (value, direction, multiple) {
   var method = direction === 'down' ? 'floor' : 'ceil';
   return Math[method](value / multiple) * multiple
