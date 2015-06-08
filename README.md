@@ -1,3 +1,5 @@
+[![Travis](https://img.shields.io/travis/bendrucker/round.js.svg?style=flat-square)](https://travis-ci.org/bendrucker/round.js)
+
 round.js
 ========
 
