@@ -1,31 +1,21 @@
-var round  = require('./');
-var expect = require('chai').expect;
+'use strict'
 
-describe('round', function () {
+var test = require('tape')
+var round = require('./')
 
-  it('defaults to the nearest integer', function () {
-    expect(round(29.99)).to.equal(30);
-  });
+test('round', function (t) {
+  t.equal(round(29.99), 30)
 
-  it('can round up', function () {
-    expect(round.up(26, 5)).to.equal(30);
-  });
+  t.equal(round(26, 5, 'up'), 30)
+  t.equal(round(26.5, 5, 'down'), 25)
 
-  it('can round down', function () {
-    expect(round.down(26.5, 5)).to.equal(25);
-  });
+  t.equal(round.up(26, 5), 30)
+  t.equal(round.down(26.5, 5), 25)
 
-  it('can round to the nearest multiple in either direction', function () {
-    expect(round(26.5, 5)).to.equal(25);
-    expect(round(28, 5)).to.equal(30);
-  });
+  t.equal(round(26.5, 5), 25)
+  t.equal(round(28, 5), 30)
+  t.equal(round(27.5, 5), 30)
+  t.equal(round(0.45, 0.5), 0.5)
 
-  it('rounds down up value is equidistant from rounded values', function () {
-    expect(round(27.5, 5)).to.equal(30);
-  });
-
-  it('can handle decimals', function () {
-    expect(round(0.45, 0.5)).to.equal(0.5);
-  });
-
-});
+  t.end()
+})
