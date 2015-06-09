@@ -1,4 +1,4 @@
-round.js
+round.js [![Build Status](https://travis-ci.org/bendrucker/round.js.svg?branch=master)](https://travis-ci.org/bendrucker/round.js)
 ========
 
 Round numbers to the nearest multiple with an optional direction.
