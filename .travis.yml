@@ -1,12 +1,4 @@
 language: node_js
 node_js:
 - '0.10'
-deploy:
-  provider: npm
-  email: bvdrucker@gmail.com
-  api_key:
-    secure: Dy/FHyPNbZ95NHxAWivjtdWaQvQuItJ6T+i55410TOWVQPV2l/NokISPdU6a50OrmySL4qM87CxMxNo6O/8r94HfBoHFpW1lKdWBIUJE4xT1cP2aLhllLpNpNjfsZntKfVnns/HlS3J0qFDz2sgI2XeKXPvBNyC3niJluI5O3wI=
-  on:
-    tags: true
-    all_branches: true
-    repo: bendrucker/round.js
+
