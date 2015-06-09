@@ -1,6 +1,6 @@
 {
   "name": "round",
-  "version": "1.0.1",
+  "version": "2.0.0",
   "description": "Round numbers to the nearest increment with an optional direction",
   "main": "index.js",
   "scripts": {
