@@ -1,4 +1,4 @@
-var round  = require('../');
+var round  = require('./');
 var expect = require('chai').expect;
 
 describe('round', function () {
