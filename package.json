@@ -27,5 +27,9 @@
   },
   "dependencies": {
     "ap": "~0.2.0"
-  }
+  },
+  "files": [
+    "index.js",
+    "readme.md"
+  ]
 }
