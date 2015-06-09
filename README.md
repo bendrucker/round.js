@@ -1,23 +1,48 @@
 round.js [![Build Status](https://travis-ci.org/bendrucker/round.js.svg?branch=master)](https://travis-ci.org/bendrucker/round.js)
 ========
 
-Round numbers to the nearest multiple with an optional direction.
+> Round numbers to the nearest multiple with an optional direction.
 
-## Setup
+## Installing
 
 ```js
-$ npm install round
+$ npm install --save round
 ```
 
 ## API
 
-#### `round(value, multiple, [options])` -> `Number`
-Rounds a number `value` to the nearest multiple. `options` (optional) can specify `options.direction` to `'up'` or `'down'` to specify the rounding direction. Otherwise, `round` will choose the nearest direction but default to `'up'` if `value` is equidistant from the rounded values.
+#### `round(value, [multiple], [options])` -> `number`
 
-#### `round.down(value, multiple)` -> `Number`
+##### value
+
+*Required*  
+Type: `number`
+
+The value to round.
+
+##### multiple
+
+Type: `number`  
+Default: `1`
+
+The multiple to round to.
+
+##### options
+
+Type: `object`
+
+An object with:
+
+* direction:
+  * type: `string`
+  * values: `'up'`, '`down'`
+
+If no direction is supplied, the number will be rounded to the nearest direction, defaulting to up if the value is equidistant from the rounded values.
+
+#### `round.down(value, multiple)` -> `number`
 
 Shortcut for calling round with `options.direction = 'down'`.
 
-#### `round.up(value, multiple)` -> `Number`
+#### `round.up(value, multiple)` -> `number`
 
 Shortcut for calling round with `options.direction = 'up'`.
