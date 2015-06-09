@@ -11,7 +11,7 @@ $ npm install --save round
 
 ## API
 
-#### `round(value, [multiple], [options])` -> `number`
+#### `round(value, [multiple], [direction])` -> `number`
 
 ##### value
 
@@ -27,22 +27,17 @@ Default: `1`
 
 The multiple to round to.
 
-##### options
+##### direction
 
-Type: `object`
-
-An object with:
-
-* direction:
-  * type: `string`
-  * values: `'up'`, '`down'`
+Type: `string`  
+Values: `up` / `down`
 
 If no direction is supplied, the number will be rounded to the nearest direction, defaulting to up if the value is equidistant from the rounded values.
 
 #### `round.down(value, multiple)` -> `number`
 
-Shortcut for calling round with `options.direction = 'down'`.
+Convenience method for rounding down.
 
 #### `round.up(value, multiple)` -> `number`
 
-Shortcut for calling round with `options.direction = 'up'`.
+Convenience method for rounding up.
