@@ -1,5 +1,7 @@
 'use strict'
 
+var roundPrecision = require('round-precision')
+var precision = require('precision')
 var ap = require('ap')
 
 exports = module.exports = round
@@ -16,7 +18,7 @@ function round (value, multiple, direction) {
       throw new Error('invalid direction')
     }
     var method = methods[direction]
-    return Math[method](value / multiple) * multiple
+    return roundPrecision(Math[method](value / multiple) * multiple, precision(multiple))
   }
   var down = round(value, multiple, 'down')
   var up = round(value, multiple, 'up')

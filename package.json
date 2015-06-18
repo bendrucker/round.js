@@ -26,7 +26,9 @@
     "tape": "~4.0.0"
   },
   "dependencies": {
-    "ap": "~0.2.0"
+    "ap": "~0.2.0",
+    "precision": "~1.0.0",
+    "round-precision": "~1.0.0"
   },
   "files": [
     "index.js",
