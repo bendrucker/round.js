@@ -2,7 +2,6 @@
 
 var roundPrecision = require('round-precision')
 var precision = require('precision')
-var ap = require('ap')
 
 exports = module.exports = round
 
@@ -28,8 +27,10 @@ function round (value, multiple, direction) {
   return up
 }
 
-Object
-  .keys(methods)
-  .forEach(function (direction) {
-    exports[direction] = ap.partialRight(round, direction)
-  })
+round.up = function roundUp (value, multiple) {
+  return round(value, multiple, 'up')
+}
+
+round.down = function roundDown (value, multiple) {
+  return round(value, multiple, 'down')
+}

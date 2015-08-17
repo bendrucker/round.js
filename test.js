@@ -11,6 +11,7 @@ test('round', function (t) {
 
   t.equal(round.up(26, 5), 30)
   t.equal(round.down(26.5, 5), 25)
+  t.equal(round.down(25.5), 25)
 
   t.equal(round(26.5, 5), 25)
   t.equal(round(28, 5), 30)
