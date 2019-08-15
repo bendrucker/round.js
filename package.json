@@ -22,7 +22,7 @@
   },
   "homepage": "https://github.com/bendrucker/round.js",
   "devDependencies": {
-    "standard": "~13.0.1",
+    "standard": "~13.1.0",
     "tape": "~4.10.0"
   },
   "dependencies": {
